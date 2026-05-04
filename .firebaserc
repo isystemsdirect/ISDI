@@ -30,6 +30,16 @@
           "isdi-overscite-preview"
         ]
       }
+    },
+    "woven-handbook-474516-b0": {
+      "hosting": {
+        "public-site": [
+          "isdi-public"
+        ],
+        "overscite-preview": [
+          "isdi-overscite"
+        ]
+      }
     }
   },
   "etags": {}
