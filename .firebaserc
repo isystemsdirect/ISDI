@@ -20,6 +20,16 @@
           "isdi-overscite-preview"
         ]
       }
+    },
+    "studio-3494288633-91d2b": {
+      "hosting": {
+        "public-site": [
+          "isdi-public-site"
+        ],
+        "overscite-preview": [
+          "isdi-overscite-preview"
+        ]
+      }
     }
   },
   "etags": {}
