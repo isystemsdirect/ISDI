@@ -1,0 +1,16 @@
+{
+  "projects": {},
+  "targets": {
+    "demo-isdi": {
+      "hosting": {
+        "public-site": [
+          "isdi-public-site"
+        ],
+        "overscite-preview": [
+          "isdi-overscite-preview"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
