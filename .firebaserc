@@ -10,6 +10,16 @@
           "isdi-overscite-preview"
         ]
       }
+    },
+    "isystemsdirect": {
+      "hosting": {
+        "public-site": [
+          "isdi-public-site"
+        ],
+        "overscite-preview": [
+          "isdi-overscite-preview"
+        ]
+      }
     }
   },
   "etags": {}
