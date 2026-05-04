@@ -1,0 +1,16 @@
+{
+  "name": "overscite-preview",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@isdi/brand": "*",
+    "@isdi/demo-data": "*",
+    "@isdi/scing-bridge": "*",
+    "@isdi/overscite-preview-kit": "*"
+  }
+}
