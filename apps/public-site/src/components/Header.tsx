@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { ShieldCheck, MessageSquare } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 import { ISDI_BRAND_NAME } from '@isdi/brand';
 
 interface HeaderProps {
@@ -38,7 +38,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenGuide }) => {
         <div className="container">
           {/* Brand */}
           <Link to="/" className="header-brand" onClick={closeMenu} aria-label="ISDI Home">
-            <ShieldCheck color="var(--color-primary)" size={28} />
+            <img 
+              src="/media/isdi_logo.png" 
+              alt="ISDI Logo" 
+              style={{ 
+                height: '32px', 
+                width: 'auto',
+                display: 'block'
+              }} 
+            />
             <div className="header-brand-text">
               <span className="header-brand-name">{ISDI_BRAND_NAME}</span>
               <span className="header-brand-sub">Infrastructure Excellence</span>
