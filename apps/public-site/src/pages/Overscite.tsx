@@ -8,15 +8,51 @@ export const Overscite: React.FC = () => (
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link to="/">Home</Link><span className="breadcrumb-sep">/</span><span>OVERSCITE</span>
         </nav>
-        <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Workspace Platform</span></div>
-        <h1 style={{ marginBottom: '1.25rem', maxWidth: '700px' }}>OVERSCITE<sup style={{ fontSize: '0.4em', color: 'var(--color-primary)', verticalAlign: 'super' }}>™</sup></h1>
-        <p className="text-muted max-prose" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
-          The governed intelligence workspace for inspection and field operations.
-          Property-aware, client-focused, and reporting-ready — designed for licensed inspection professionals.
-        </p>
-        <div className="flex gap-md flex-wrap mt-md">
-          <span className="badge badge-preview">Preview Available</span>
-          <span className="badge badge-dev">In Development</span>
+
+        {/* Hero row: text left, logo right */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'flex-start',
+          justifyContent: 'space-between',
+          gap: 'clamp(1.5rem, 4vw, 3rem)',
+          flexWrap: 'wrap',
+        }}>
+          {/* Left: text content */}
+          <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+            <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Workspace Platform</span></div>
+            <h1 style={{ marginBottom: '1.25rem' }}>
+              OVERSCITE<sup style={{ fontSize: '0.4em', color: 'var(--color-primary)', verticalAlign: 'super' }}>™</sup>
+            </h1>
+            <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.7', maxWidth: '560px' }}>
+              The governed intelligence workspace for inspection and field operations.
+              Property-aware, client-focused, and reporting-ready — designed for licensed inspection professionals.
+            </p>
+            <div className="flex gap-md flex-wrap mt-md">
+              <span className="badge badge-preview">Preview Available</span>
+              <span className="badge badge-dev">In Development</span>
+            </div>
+          </div>
+
+          {/* Right: OVERSCITE logo, page-right aligned */}
+          <div style={{
+            flex: '0 0 auto',
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignSelf: 'center',
+          }}>
+            <img
+              src="/media/overscite_logo.png"
+              alt="OVERSCITE logo"
+              style={{
+                width: 'clamp(120px, 16vw, 200px)',
+                height: 'auto',
+                mixBlendMode: 'multiply',
+                filter: 'drop-shadow(0 4px 24px rgba(212,160,23,0.25))',
+                userSelect: 'none',
+              }}
+              draggable={false}
+            />
+          </div>
         </div>
       </div>
     </section>
