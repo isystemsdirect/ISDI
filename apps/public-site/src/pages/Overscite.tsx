@@ -44,7 +44,7 @@ export const Overscite: React.FC = () => (
               src="/media/overscite_logo.png"
               alt="OVERSCITE logo"
               style={{
-                width: 'clamp(360px, 48vw, 600px)',
+                width: 'clamp(288px, 38.4vw, 480px)',
                 height: 'auto',
                 mixBlendMode: 'multiply',
                 filter: 'drop-shadow(0 4px 24px rgba(212,160,23,0.25))',
