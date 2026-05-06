@@ -81,10 +81,10 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
               <span className="eyebrow-text">Platform Overview</span>
               <div className="eyebrow-line" />
             </div>
-            <h2 style={{ marginBottom: '1rem' }}>Built for Infrastructure Professionals</h2>
+            <h2 style={{ marginBottom: '1rem' }}>Built for Multi-Industry Field Professionals</h2>
             <p className="text-muted max-prose" style={{ margin: '0 auto' }}>
-              Inspection Systems Direct delivers governed intelligence tooling for inspection,
-              field operations, and infrastructure management — designed with discipline, not convenience.
+              Inspection Systems Direct delivers governed intelligence tooling for engineering, 
+              infrastructure, and professional field operations — designed with discipline, not convenience.
             </p>
           </div>
 
@@ -98,7 +98,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
             <FeatureCard
               icon={<Eye size={28} color="var(--color-primary)" />}
               title="OVERSCITE™ Workspace"
-              desc="The governed intelligence workspace for inspection and field operations — property-aware, reporting-ready."
+              desc="The governed intelligence workspace for multi-industry field operations — asset-aware, reporting-ready."
               link="/overscite"
             />
             <FeatureCard
@@ -128,9 +128,9 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
               OVERSCITE<sup style={{ fontSize: '0.4em', color: 'var(--color-primary)' }}>™</sup>
             </h2>
             <p style={{ color: 'var(--color-text-muted)', marginBottom: '2rem', lineHeight: '1.7', fontSize: '1rem' }}>
-              The premier intelligence workspace for inspection and field operations.
-              Property-aware, client-focused, and reporting-ready.
-              Experience a demo-safe preview of the future of infrastructure management.
+              The premier intelligence workspace for multi-industry field operations.
+              Asset-aware, client-focused, and reporting-ready.
+              Experience a demo-safe preview of the future of field-operational intelligence.
             </p>
             <div className="flex gap-md flex-wrap">
               <a
@@ -165,7 +165,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
               <h2 style={{ marginBottom: '1.5rem' }}>A Sovereign Architecture</h2>
               <p className="text-muted" style={{ lineHeight: '1.8', marginBottom: '1.5rem', fontSize: '1rem' }}>
                 SCINGULAR is not just an AI — it is a governed orchestration layer designed to empower
-                licensed inspection and infrastructure professionals. From field sensors to executive dashboards,
+                multi-industry field and infrastructure professionals. From field sensors to executive dashboards,
                 intelligence remains a tool of human authority.
               </p>
               <ul style={{ display: 'grid', gap: '0.9rem' }}>

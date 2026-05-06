@@ -19,8 +19,8 @@ export const About: React.FC = () => {
           <h1 style={{ marginBottom: '1.25rem', maxWidth: '700px' }}>About Inspection Systems Direct</h1>
           <p className="text-muted max-prose" style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
             Inspection Systems Direct (ISDI) is an infrastructure intelligence company focused on
-            building governed, human-authority-first technology for the professional inspection and
-            field operations domain.
+            building governed, human-authority-first technology for professional field operations 
+            and infrastructure intelligence domains.
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ export const About: React.FC = () => {
             <div style={{ display: 'grid', gap: '1.25rem' }}>
               {[
                 { icon: <Shield size={22} color="var(--color-primary)" />, title: 'Human-Final Authority', desc: 'No automated decision overrides human accountability.' },
-                { icon: <Target size={22} color="var(--color-primary)" />, title: 'Domain-Specific Intelligence', desc: 'Built for inspection professionals, not generic enterprise.' },
+                { icon: <Target size={22} color="var(--color-primary)" />, title: 'Domain-Specific Intelligence', desc: 'Built for professional field intelligence, not generic enterprise.' },
                 { icon: <Users size={22} color="var(--color-primary)" />, title: 'Governed by Design', desc: 'BANE constraint enforcement at every system boundary.' },
                 { icon: <CheckCircle size={22} color="var(--color-primary)" />, title: 'Audit-Ready', desc: 'Evidentiary chains inspectable at every layer.' },
               ].map(({ icon, title, desc }) => (

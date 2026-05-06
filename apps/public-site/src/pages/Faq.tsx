@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 const FAQ_ITEMS = [
   {
     q: 'What is Inspection Systems Direct (ISDI)?',
-    a: 'Inspection Systems Direct (ISDI) is an infrastructure intelligence company developing governed AI tooling for professional inspection and field operations. ISDI builds SCINGULAR™ — a sovereign orchestration architecture — and OVERSCITE™ — the primary intelligence workspace for inspection professionals.',
+    a: 'Inspection Systems Direct (ISDI) is an infrastructure intelligence company developing governed AI tooling for professional field operations across multiple industries. ISDI builds SCINGULAR™ — a sovereign orchestration architecture — and OVERSCITE™ — the primary intelligence workspace for multi-industry field professionals.',
   },
   {
     q: 'What is SCINGULAR™?',
@@ -13,7 +13,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'What is OVERSCITE™?',
-    a: 'OVERSCITE is the governed intelligence workspace built on the SCINGULAR architecture. It is designed for inspection and field operations professionals — providing property-aware, client-focused, reporting-ready workflow management under human-final authority constraints.',
+    a: 'OVERSCITE is the governed intelligence workspace built on the SCINGULAR architecture. It is designed for professional field operations across multiple industries — providing asset-aware, client-focused, reporting-ready workflow management under human-final authority constraints.',
   },
   {
     q: 'What is the OVERSCITE Preview?',
@@ -24,7 +24,7 @@ const FAQ_ITEMS = [
     a: 'Submit a Preview Request through the Preview Request page. You will need to provide your name, email, organization, role, and interest area. A 6-digit access code will be generated for your record. Access is confirmed by the ISDI team after reviewing your request.',
   },
   {
-    q: 'Is SCINGULAR a replacement for licensed inspectors?',
+    q: 'Is SCINGULAR a replacement for professional human authority?',
     a: 'No. SCINGULAR is explicitly designed to augment licensed, certified, and accountable professionals — not replace them. Human authority is the non-negotiable constraint at every level of the architecture. Automation remains subordinate to human decision-making.',
   },
   {

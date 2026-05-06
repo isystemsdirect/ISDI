@@ -63,15 +63,15 @@ export const Overscite: React.FC = () => (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%,380px),1fr))', gap: 'clamp(2rem,6vw,5rem)', alignItems: 'center' }}>
           <div>
             <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Platform Overview</span></div>
-            <h2 style={{ marginBottom: '1.25rem' }}>The Inspection Intelligence Workspace</h2>
-            <p className="text-muted" style={{ lineHeight: '1.8', marginBottom: '1.25rem' }}>
-              OVERSCITE is the primary workspace layer of the SCINGULAR architecture. It provides inspection
-              professionals with a governed interface for managing properties, field data, clients, and
-              compliance workflows under BANE-enforced boundaries.
+            <h2 style={{ marginBottom: '1.25rem' }}>The Field Intelligence Workspace</h2>
+            <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.7', maxWidth: '600px' }}>
+              OVERSCITE is the primary workspace layer built on the SCINGULAR architecture. It provides
+              a governed environment for managing assets, field intelligence, stakeholder data, 
+              and compliance workflows across professional field operations.
             </p>
             <p className="text-muted" style={{ lineHeight: '1.8' }}>
               Every action in OVERSCITE is governed, auditable, and human-reviewed. No automated decision
-              overrides the licensed professional's judgment.
+              overrides professional human judgment.
             </p>
           </div>
           <div style={{ display: 'grid', gap: '1rem' }}>
@@ -123,7 +123,7 @@ export const Overscite: React.FC = () => (
         <div className="eyebrow" style={{ justifyContent: 'center' }}><div className="eyebrow-line" /><span className="eyebrow-text">Capabilities</span><div className="eyebrow-line" /></div>
         <h2 className="text-center" style={{ marginBottom: '0.5rem' }}>Designed for Field Professionals</h2>
         <p className="text-muted text-center max-prose mb-lg" style={{ margin: '0.75rem auto 3rem' }}>
-          OVERSCITE is designed to be the operational intelligence layer for inspection professionals — not a generic productivity tool.
+          OVERSCITE is designed to be the operational intelligence layer for multi-industry field professionals — not a generic productivity tool.
         </p>
         <div className="card-grid">
           {[

@@ -27,8 +27,8 @@ export const MissionSection = () => {
         }}>
           <MissionCard 
             icon={<Target size={32} />} 
-            title="Strategic Inspection" 
-            description="Infrastructure-grade intelligence tailored for high-stakes field inspection environments."
+            title="Strategic Field Intelligence" 
+            description="Infrastructure-grade intelligence tailored for high-stakes multi-industry field operations."
             image="/media/reporting.jpeg"
           />
           <MissionCard 

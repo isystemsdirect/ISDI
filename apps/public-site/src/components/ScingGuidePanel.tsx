@@ -18,7 +18,7 @@ const STATIC_KNOWLEDGE: Record<string, KnowledgeEntry> = {
     key: 'scingular',
     response:
       'SCINGULAR™ is the governed orchestration architecture developed by Inspection Systems Direct. ' +
-      'It operates as a sovereign intelligence layer designed to support licensed inspection and ' +
+      'It operates as a sovereign intelligence layer designed to support multi-industry field and ' +
       'infrastructure professionals. Intelligence remains a tool of human authority — it does not ' +
       'replace accountable human judgment. The architecture includes ScingBFI (the unified intelligence ' +
       'stack), LARI (the reasoning engine), BANE (the constraint and integrity enforcement layer), ' +
@@ -27,11 +27,11 @@ const STATIC_KNOWLEDGE: Record<string, KnowledgeEntry> = {
   overscite: {
     key: 'overscite',
     response:
-      'OVERSCITE™ is the governed intelligence workspace for inspection and field operations. ' +
-      'It is property-aware, client-focused, and reporting-ready. OVERSCITE provides inspection ' +
-      'professionals with a governed interface for managing properties, field data, and compliance ' +
+      'OVERSCITE™ is the governed intelligence workspace for multi-industry field operations. ' +
+      'It is asset-aware, client-focused, and reporting-ready. OVERSCITE provides field ' +
+      'professionals with a governed interface for managing assets, field intelligence, and compliance ' +
       'workflows. The Preview environment is a demo-safe, isolated demonstration — it does not ' +
-      'contain live customer, property, or inspection records.',
+      'contain live customer, asset, or field records.',
   },
   governance: {
     key: 'governance',

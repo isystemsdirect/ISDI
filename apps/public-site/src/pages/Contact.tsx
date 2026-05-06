@@ -80,7 +80,7 @@ export const Contact: React.FC = () => {
                       <option value="strategic-partnership">Strategic Partnership</option>
                       <option value="technology-partnership">Technology / Integration Partnership</option>
                       <option value="compute-alignment">Compute / Infrastructure Alignment</option>
-                      <option value="inspection-professional">Inspection Professional Interest</option>
+                      <option value="field-ops">Field Operations & Professional Interest</option>
                       <option value="investment">Investment Inquiry</option>
                       <option value="media">Media / Research</option>
                       <option value="other">Other</option>
@@ -126,7 +126,7 @@ export const Contact: React.FC = () => {
                   {[
                     'Strategic infrastructure and inspection industry partners',
                     'Compute and AI infrastructure alignment partners',
-                    'Licensed inspection professionals for advisory input',
+                    'Licensed and multi-industry field professionals for advisory input',
                     'Technology integration and platform partnerships',
                     'Research and development collaborations',
                   ].map(item => (

@@ -103,7 +103,7 @@ export const PreviewRequest: React.FC = () => {
                     </div>
                     <div className="form-group">
                       <label className="form-label" htmlFor="pr-role">Role *</label>
-                      <input id="pr-role" name="role" type="text" className="form-input" value={form.role} onChange={handleChange} required placeholder="Inspector, PM, Director…" />
+                      <input id="pr-role" name="role" type="text" className="form-input" value={form.role} onChange={handleChange} required placeholder="Engineer, Inspector, Lead, Director…" />
                     </div>
                   </div>
 
