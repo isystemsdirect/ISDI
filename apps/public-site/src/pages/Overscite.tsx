@@ -21,7 +21,7 @@ export const Overscite: React.FC = () => (
           <div style={{ flex: '1 1 320px', minWidth: 0 }}>
             <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Workspace Platform</span></div>
             <h1 style={{ marginBottom: '1.25rem', fontSize: 'clamp(0.99rem, 3.15vw, 2.25rem)' }}>
-              OVERSCITE<sup style={{ fontSize: '0.4em', color: 'var(--color-primary)', verticalAlign: 'super' }}>™</sup>{' '}Global
+              OVERSCITE<sup style={{ fontSize: '0.4em', color: 'var(--color-primary)', verticalAlign: 'super' }}>™</sup>{' '}Global Field Intelligence
             </h1>
             <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.7', maxWidth: '560px' }}>
               The governed intelligence workspace for inspection and field operations.
