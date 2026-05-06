@@ -1,4 +1,4 @@
-export const ISDI_BRAND_NAME = "ISDI / SCINGULAR";
+export const ISDI_BRAND_NAME = "Inspection Systems Direct Inc";
 export const BRAND_COLORS = {
   primary: "#D4A017", // ISDI Golden Yellow
   secondary: "#0E3B2E", // SCINGULAR Rich Green
