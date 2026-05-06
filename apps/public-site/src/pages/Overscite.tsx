@@ -25,7 +25,7 @@ export const Overscite: React.FC = () => (
             </h1>
             <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.7', maxWidth: '560px' }}>
               The governed intelligence workspace for inspection and field operations.
-              Property-aware, client-focused, and reporting-ready — designed for licensed inspection professionals.
+              Property-aware, client-focused, and reporting-ready — designed for multi-industry field professionals.
             </p>
             <div className="flex gap-md flex-wrap mt-md">
               <span className="badge badge-preview">Preview Available</span>
