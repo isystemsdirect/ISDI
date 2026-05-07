@@ -15,6 +15,7 @@ To prevent accidental discovery via search engines, the following guardrails are
 ## 3. Linkage Posture
 - **Hidden Link Only:** The route is NOT present in any public navigation (Header, Footer, or CTAs).
 - **Subdomain Entry:** Access is intended via `review.isystemsdirect.com/nvidia-review`.
+- **Target Site:** Bound to `isdi-public` Firebase Hosting site.
 
 ## 4. Source Privacy
 - **Source Deck Isolation:** The proprietary source deck remains in `archive/proprietary/` and is never served or linked by the application.
