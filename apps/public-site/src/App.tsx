@@ -20,6 +20,20 @@ import { Accessibility }   from './pages/legal/Accessibility';
 import { Disclaimers }     from './pages/legal/Disclaimers';
 import { NvidiaReviewExperience } from './pages/nvidia/NvidiaReviewExperience';
 
+/**
+ * Automatically redirects review.isystemsdirect.com root to the hidden review surface.
+ */
+function ReviewSubdomainRedirect() {
+  if (
+    typeof window !== 'undefined' &&
+    window.location.hostname === 'review.isystemsdirect.com' &&
+    window.location.pathname === '/'
+  ) {
+    window.location.replace('/nvidia-review');
+  }
+  return null;
+}
+
 function App() {
   const [guideActive, setGuideActive] = useState(false);
 
@@ -27,6 +41,7 @@ function App() {
     <MotionPreferenceGuard>
       <BaneContextGate>
         <div className="app">
+          <ReviewSubdomainRedirect />
           <Header onOpenGuide={() => setGuideActive(true)} />
 
           <main>
