@@ -3,6 +3,16 @@
    UG UIX v2 | SCINGULAR Governed Interface
    ============================================================ */
 
+/* ── UG UIX Styles ─────────────────────────────────────────── */
+@import '../../../packages/ug-uix/src/styles/motion-tokens.css';
+@import '../../../packages/ug-uix/src/styles/reduced-motion.css';
+@import '../../../packages/ug-uix/src/styles/reveal-sequences.css';
+@import '../../../packages/ug-uix/src/styles/glass-containment.css';
+@import '../../../packages/ug-uix/src/styles/governed-progress.css';
+@import '../../../packages/ug-uix/src/styles/context-gate.css';
+@import '../../../packages/ug-uix/src/styles/utility-bar.css';
+
+
 /* ── Design Tokens ─────────────────────────────────────────── */
 :root {
   --color-primary:       #D4A017;

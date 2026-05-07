@@ -1,0 +1,28 @@
+/* UG-UIX-STEM-007: Motion Sovereignty Rule CSS */
+
+@media (prefers-reduced-motion: reduce) {
+  .ug-uix-presence-halo::before {
+    display: none !important;
+  }
+  
+  .ug-uix-ambient-blob {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0.1 !important; /* Static low opacity */
+  }
+  
+  .ug-uix-reveal-sequence {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

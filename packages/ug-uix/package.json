@@ -1,0 +1,15 @@
+{
+  "name": "@isdi/ug-uix",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "lucide-react": "^0.439.0",
+    "framer-motion": "^11.5.4"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}

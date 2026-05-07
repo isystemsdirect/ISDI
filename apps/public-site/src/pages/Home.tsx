@@ -3,6 +3,7 @@ import { ChevronRight, Shield, Eye, Cpu } from 'lucide-react';
 import { GovernanceSection } from '../components/GovernanceSection';
 import { NvidiaSection }     from '../components/NvidiaSection';
 import { MissionSection }    from '../components/MissionSection';
+import { RevealSequence, GlassPanel } from '@isdi/ug-uix';
 
 interface HomeProps {
   onOpenGuide: () => void;
@@ -19,7 +20,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
       >
         <div className="cinematic-overlay" />
         <div className="container cinematic-content">
-          <div className="hero-content">
+          <RevealSequence className="hero-content">
             <div className="eyebrow">
               <div className="eyebrow-line" />
               <span className="eyebrow-text">Governed Intelligence</span>
@@ -68,13 +69,13 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
                 <span className="hero-metric-value">In Development</span>
               </div>
             </div>
-          </div>
+          </RevealSequence>
         </div>
       </section>
 
       {/* ── Platform Highlights ─────────────────────────────────── */}
       <section className="section" style={{ background: 'var(--color-accent)' }}>
-        <div className="container">
+        <RevealSequence className="container">
           <div className="text-center mb-md">
             <div className="eyebrow" style={{ justifyContent: 'center' }}>
               <div className="eyebrow-line" />
@@ -108,7 +109,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
               link="/scingular"
             />
           </div>
-        </div>
+        </RevealSequence>
       </section>
 
       {/* ── OVERSCITE Preview Band ─────────────────────────────── */}
@@ -120,7 +121,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
       >
         <div className="cinematic-overlay" />
         <div className="container cinematic-content">
-          <div className="glass-panel" style={{ maxWidth: '680px' }}>
+          <GlassPanel style={{ maxWidth: '680px' }}>
             <span className="badge badge-dev" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>
               Preview Environment
             </span>
@@ -146,7 +147,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
                 Ask Scing
               </button>
             </div>
-          </div>
+          </GlassPanel>
         </div>
       </section>
 
@@ -169,12 +170,18 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
                 intelligence remains a tool of human authority.
               </p>
               <ul style={{ display: 'grid', gap: '0.9rem' }}>
-                {['ScingBFI — Unified Intelligence Stack', 'BANE — Constraint & Integrity Enforcement', 'ZTI — Zero-Trust Intelligence Posture', 'LARI — Governed Reasoning Engine'].map(item => (
-                  <li key={item} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                    <div style={{ width: '5px', height: '5px', background: 'var(--color-primary)', borderRadius: '50%', marginTop: '0.55rem', flexShrink: 0 }} />
-                    <span style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)' }}>{item}</span>
-                  </li>
-                ))}
+                <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                  <div style={{ width: '5px', height: '5px', background: 'var(--color-primary)', borderRadius: '50%', marginTop: '0.55rem', flexShrink: 0 }} />
+                  <span style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)' }}><strong>Scing™:</strong> the voice-first interface presence that guides the user through governed intelligence workflows.</span>
+                </li>
+                <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                  <div style={{ width: '5px', height: '5px', background: 'var(--color-primary)', borderRadius: '50%', marginTop: '0.55rem', flexShrink: 0 }} />
+                  <span style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)' }}><strong>LARI™:</strong> the reasoning federation that supports analysis, planning, retrieval, and structured decision support.</span>
+                </li>
+                <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                  <div style={{ width: '5px', height: '5px', background: 'var(--color-primary)', borderRadius: '50%', marginTop: '0.55rem', flexShrink: 0 }} />
+                  <span style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)' }}><strong>BANE™:</strong> the integrity and policy layer that preserves boundaries, traceability, and human-governed control.</span>
+                </li>
               </ul>
               <div className="mt-md">
                 <Link to="/scingular" className="btn btn-outline">Explore Architecture</Link>
@@ -182,7 +189,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
             </div>
 
             {/* Architecture Ring Visual */}
-            <div className="glass-panel" style={{ textAlign: 'center' }}>
+            <GlassPanel style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '0.65rem', color: 'var(--color-primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '2rem' }}>
                 Technical Core
               </div>
@@ -191,7 +198,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
               <div style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', marginTop: '0.4rem', letterSpacing: '0.1em' }}>
                 In Development — Prototype Stage
               </div>
-            </div>
+            </GlassPanel>
           </div>
         </div>
       </section>

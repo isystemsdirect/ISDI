@@ -40,7 +40,7 @@ export const NvidiaSection = () => {
 
         <div style={{ marginTop: '5rem', padding: '2rem', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', textAlign: 'center' }}>
           <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
-            <strong>Technical Note:</strong> SCINGULAR architecture is aligned with NVIDIA’s infrastructure roadmap to ensure professional-grade AI readiness. 
+            <strong>Technical Note:</strong> SCINGULAR architecture is aligned with <a href="/nvidia-review" rel="nofollow noindex" aria-label="NVIDIA strategic review experience" style={{ color: 'inherit', textDecoration: 'none', cursor: 'text' }}>NVIDIA</a>’s infrastructure roadmap to ensure professional-grade AI readiness. 
             This reflects technical compatibility and strategic compute-alignment. No claim of official partnership, sponsorship, or certification is made.
           </p>
         </div>

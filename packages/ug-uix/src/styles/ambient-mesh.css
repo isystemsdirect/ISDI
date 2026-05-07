@@ -1,0 +1,17 @@
+/* UG-UIX-STEM-005: Ambient Intelligence Mesh CSS */
+
+.ug-uix-ambient-mesh {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ug-uix-ambient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+  /* Animation to be driven by JS or keyframes when in viewport */
+}

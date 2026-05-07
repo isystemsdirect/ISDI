@@ -1,125 +1,99 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Users, Target, CheckCircle } from 'lucide-react';
+import { Target, Users, Shield, Award } from 'lucide-react';
+import { RevealSequence, GlassPanel } from '@isdi/ug-uix';
 
-export const About: React.FC = () => {
-  return (
-    <>
-      {/* Page Hero */}
-      <section className="page-hero">
-        <div className="container cinematic-content">
+export const About: React.FC = () => (
+  <>
+    <section className="page-hero">
+      <div className="container cinematic-content">
+        <RevealSequence delay={100}>
           <nav className="breadcrumb" aria-label="Breadcrumb">
-            <Link to="/">Home</Link>
-            <span className="breadcrumb-sep">/</span>
-            <span>About ISDI</span>
+            <Link to="/">Home</Link><span className="breadcrumb-sep">/</span><span>About</span>
           </nav>
-          <div className="eyebrow">
-            <div className="eyebrow-line" />
-            <span className="eyebrow-text">Company</span>
-          </div>
-          <h1 style={{ marginBottom: '1.25rem', maxWidth: '700px' }}>About Inspection Systems Direct</h1>
-          <p className="text-muted max-prose" style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
-            Inspection Systems Direct (ISDI) is an infrastructure intelligence company focused on
-            building governed, human-authority-first technology for professional field operations 
-            and infrastructure intelligence domains.
+          <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Governance</span></div>
+          <h1 style={{ marginBottom: '1.25rem' }}>Our Mission</h1>
+          <p className="text-muted max-prose" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
+            Advancing the infrastructure inspection industry through governed intelligence, 
+            accountable automation, and uncompromising evidentiary integrity.
           </p>
-        </div>
-      </section>
+        </RevealSequence>
+      </div>
+    </section>
 
-      {/* Mission */}
-      <section className="section" style={{ background: 'var(--color-background)' }}>
-        <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%,400px),1fr))', gap: 'clamp(2.5rem,6vw,5rem)', alignItems: 'center' }}>
+    <section className="section" style={{ background: 'var(--color-background)' }}>
+      <div className="container">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%,450px),1fr))', gap: 'clamp(2rem,6vw,5rem)', alignItems: 'center' }}>
+          <RevealSequence delay={200}>
             <div>
-              <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Our Mission</span></div>
-              <h2 style={{ marginBottom: '1.5rem' }}>Governed Intelligence for Professionals</h2>
+              <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Heritage</span></div>
+              <h2 style={{ marginBottom: '1.5rem' }}>Pioneering Infrastructure Intelligence</h2>
               <p className="text-muted" style={{ lineHeight: '1.8', marginBottom: '1.25rem' }}>
-                We believe that artificial intelligence must remain subordinate to the licensed, certified,
-                and accountable humans who carry professional responsibility in high-stakes domains.
+                ISDI was founded on the belief that the next generation of infrastructure management 
+                requires more than just data—it requires **governed intelligence**.
               </p>
               <p className="text-muted" style={{ lineHeight: '1.8' }}>
-                ISDI builds intelligence systems that amplify professional judgment — not replace it.
-                Every feature, every workflow, and every data boundary is designed with human authority
-                as the non-negotiable constraint.
+                We have moved beyond the "move fast and break things" era of technology. In the world 
+                of critical infrastructure, failure is not an option. Our systems are built to be 
+                unfailingly reliable, auditable, and human-anchored.
               </p>
             </div>
-            <div style={{ display: 'grid', gap: '1.25rem' }}>
-              {[
-                { icon: <Shield size={22} color="var(--color-primary)" />, title: 'Human-Final Authority', desc: 'No automated decision overrides human accountability.' },
-                { icon: <Target size={22} color="var(--color-primary)" />, title: 'Domain-Specific Intelligence', desc: 'Built for professional field intelligence, not generic enterprise.' },
-                { icon: <Users size={22} color="var(--color-primary)" />, title: 'Governed by Design', desc: 'BANE constraint enforcement at every system boundary.' },
-                { icon: <CheckCircle size={22} color="var(--color-primary)" />, title: 'Audit-Ready', desc: 'Evidentiary chains inspectable at every layer.' },
-              ].map(({ icon, title, desc }) => (
-                <div key={title} className="feature-card" style={{ display: 'flex', gap: '1rem', padding: '1.25rem' }}>
-                  <div style={{ flexShrink: 0, marginTop: '2px' }}>{icon}</div>
-                  <div>
-                    <div style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.35rem' }}>{title}</div>
-                    <div className="text-muted text-sm">{desc}</div>
-                  </div>
-                </div>
-              ))}
+          </RevealSequence>
+
+          <RevealSequence delay={400}>
+            <GlassPanel className="p-10" style={{ borderLeft: '4px solid var(--color-primary)' }}>
+              <Target size={32} color="var(--color-primary)" style={{ marginBottom: '1.5rem' }} />
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>The ISDI Standard</h3>
+              <p className="text-muted text-sm" style={{ lineHeight: '1.7' }}>
+                We define Infrastructure Excellence as the intersection of technical precision and 
+                governance-first architecture. Every product we build must satisfy the most 
+                stringent professional standards for safety and accountability.
+              </p>
+            </GlassPanel>
+          </RevealSequence>
+        </div>
+      </div>
+    </section>
+
+    <section className="section" style={{ background: 'var(--color-accent)' }}>
+      <div className="container">
+        <div className="eyebrow" style={{ justifyContent: 'center' }}><div className="eyebrow-line" /><span className="eyebrow-text">Values</span><div className="eyebrow-line" /></div>
+        <h2 className="text-center" style={{ marginBottom: '3.5rem' }}>Core Pillars</h2>
+
+        <div className="card-grid">
+          {[
+            { icon: <Users />, title: 'Human-in-the-Loop', desc: 'We believe intelligence should augment professional expertise, not replace human accountability.' },
+            { icon: <Shield />, title: 'Governed by Design', desc: 'Constraints are baked into our architecture via the BANE layer, ensuring system integrity.' },
+            { icon: <Award />, title: 'Evidentiary Excellence', desc: 'All data capture and analysis is auditable and traceable back to its original source context.' }
+          ].map((item, i) => (
+            <RevealSequence key={i} delay={100 + (i * 100)}>
+              <GlassPanel className="p-8 text-center h-full">
+                <div className="text-primary mb-md flex-center">{React.cloneElement(item.icon as React.ReactElement, { size: 28 })}</div>
+                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem' }}>{item.title}</h3>
+                <p className="text-muted text-sm" style={{ lineHeight: '1.6' }}>{item.desc}</p>
+              </GlassPanel>
+            </RevealSequence>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="section">
+      <div className="container">
+        <RevealSequence delay={200}>
+          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+            <h2 style={{ marginBottom: '1.5rem' }}>Join the Evolution</h2>
+            <p className="text-muted mb-lg" style={{ lineHeight: '1.8' }}>
+              We are actively expanding our partner ecosystem and technical leadership. If you are a 
+              professional in the infrastructure space or a developer interested in governed AI, 
+              we invite you to connect.
+            </p>
+            <div className="flex-center gap-md">
+              <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 2.5rem' }}>Get in Touch</Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Company Posture */}
-      <section className="section" style={{ background: 'var(--color-accent)' }}>
-        <div className="container">
-          <div className="eyebrow" style={{ justifyContent: 'center' }}>
-            <div className="eyebrow-line" /><span className="eyebrow-text">Development Stage</span><div className="eyebrow-line" />
-          </div>
-          <h2 className="text-center" style={{ marginBottom: '1.5rem' }}>Where We Are</h2>
-          <div style={{ maxWidth: '720px', margin: '0 auto', textAlign: 'center' }}>
-            <p className="text-muted" style={{ lineHeight: '1.8', marginBottom: '2rem', fontSize: '1rem' }}>
-              ISDI is a prototype-stage technology company. SCINGULAR and OVERSCITE are in active
-              development. The OVERSCITE Preview environment is a demo-safe demonstration — it does
-              not represent a production deployment or contain live customer data.
-            </p>
-            <div className="flex-center gap-md flex-wrap">
-              <span className="badge badge-dev">Prototype Stage</span>
-              <span className="badge badge-active">Active Development</span>
-              <span className="badge badge-preview">Preview Available</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Governance Posture */}
-      <section className="section" style={{ background: 'var(--color-background)' }}>
-        <div className="container">
-          <div className="glass-panel" style={{ maxWidth: '820px', margin: '0 auto' }}>
-            <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Governance</span></div>
-            <h2 style={{ marginBottom: '1.25rem' }}>Our Governance Posture</h2>
-            <p className="text-muted" style={{ lineHeight: '1.8', marginBottom: '1.25rem' }}>
-              All ISDI systems operate under a strict governance posture. Automation remains subordinate
-              to human decision-making. Recommendations are auditable. High-impact conclusions are
-              human-reviewable. Safety and compliance chains are fully inspectable.
-            </p>
-            <p className="text-muted" style={{ lineHeight: '1.8' }}>
-              We do not design systems that obscure accountability, increase autonomy silently, or
-              create deceptive representations of certainty or regulatory approval.
-            </p>
-            <div className="mt-md">
-              <Link to="/scingular" className="btn btn-outline">Explore the Architecture</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section text-center" style={{ background: 'linear-gradient(to bottom, var(--color-accent), var(--color-background))' }}>
-        <div className="container">
-          <h2 style={{ marginBottom: '1.25rem' }}>Interested in Working with Us?</h2>
-          <p className="text-muted mb-lg max-prose" style={{ margin: '0 auto 2.5rem' }}>
-            We are seeking strategic partners, infrastructure professionals, and aligned compute
-            partners to join the SCINGULAR development track.
-          </p>
-          <div className="flex-center gap-md flex-wrap">
-            <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 2.5rem' }}>Partnership Inquiry</Link>
-            <Link to="/preview-request" className="btn btn-ghost" style={{ padding: '1rem 2.5rem' }}>Request Preview</Link>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
+        </RevealSequence>
+      </div>
+    </section>
+  </>
+);

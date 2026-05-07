@@ -1,0 +1,22 @@
+/* UG-UIX-STEM-001: Presence Halo CSS */
+
+.ug-uix-presence-halo {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Base styling pending componentization */
+.ug-uix-presence-halo::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(circle 300px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.05), transparent 80%);
+  opacity: 0;
+  transition: opacity var(--ug-uix-transition-base);
+  z-index: 0;
+}
+
+.ug-uix-presence-halo:hover::before {
+  opacity: 1;
+}

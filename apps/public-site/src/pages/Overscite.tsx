@@ -1,159 +1,112 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Eye, FileText, MapPin, Users, CheckCircle } from 'lucide-react';
+import { Layout, Search, Map, Calendar, ShieldCheck, Database } from 'lucide-react';
+import { RevealSequence, GlassPanel } from '@isdi/ug-uix';
+
+const FEATURES = [
+  { icon: <Map size={24} color="var(--color-primary)" />, title: 'Geospatial Command', desc: 'Centralized location intelligence with layered data visualization and conflict reason-code analysis.' },
+  { icon: <Calendar size={24} color="var(--color-primary)" />, title: 'Smart Scheduling', desc: 'Proprietary SmartSCHEDULER™ for optimizing field resource allocation while maintaining governance guardrails.' },
+  { icon: <Search size={24} color="var(--color-primary)" />, title: 'Advanced Inspection', desc: 'Governed inspection workflows with full evidentiary traceability and multi-step validation.' },
+  { icon: <ShieldCheck size={24} color="var(--color-primary)" />, title: 'BANE Enforcement', desc: 'Real-time boundary and normative enforcement ensures all platform acts remain within authorized parameters.' },
+  { icon: <Database size={24} color="var(--color-primary)" />, title: 'ArcHive™ Lineage', desc: 'Permanent, audit-ready record keeping for all operational intelligence and human-in-the-loop decisions.' },
+  { icon: <Layout size={24} color="var(--color-primary)" />, title: 'OverHUD Interface', desc: 'Ultra-Grade visual command surface designed for rapid situation assessment and strategic response.' },
+];
 
 export const Overscite: React.FC = () => (
   <>
     <section className="page-hero">
       <div className="container cinematic-content">
-        <nav className="breadcrumb" aria-label="Breadcrumb">
-          <Link to="/">Home</Link><span className="breadcrumb-sep">/</span><span>OVERSCITE</span>
-        </nav>
-
-        {/* Hero row: text left, logo right */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'flex-start',
-          justifyContent: 'space-between',
-          gap: 'clamp(1.5rem, 4vw, 3rem)',
-          flexWrap: 'wrap',
-        }}>
-          {/* Left: text content */}
-          <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-            <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Workspace Platform</span></div>
-            <h1 style={{ marginBottom: '1.25rem', fontSize: 'clamp(0.99rem, 3.15vw, 2.25rem)' }}>
-              OVERSCITE<sup style={{ fontSize: '0.4em', color: 'var(--color-primary)', verticalAlign: 'super' }}>™</sup>{' '}Global Field Intelligence
-            </h1>
-            <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.7', maxWidth: '560px' }}>
-              The governed intelligence workspace for inspection and field operations.
-              Property-aware, client-focused, and reporting-ready — designed for multi-industry field professionals.
-            </p>
-            <div className="flex gap-md flex-wrap mt-md">
-              <span className="badge badge-preview">Preview Available</span>
-              <span className="badge badge-dev">In Development</span>
-            </div>
-          </div>
-
-          {/* Right: OVERSCITE logo, page-right aligned */}
-          <div style={{
-            flex: '0 0 auto',
-            display: 'flex',
-            justifyContent: 'flex-end',
-            alignSelf: 'center',
-          }}>
-            <img
-              src="/media/overscite_logo.png"
-              alt="OVERSCITE logo"
-              style={{
-                width: 'clamp(288px, 38.4vw, 480px)',
-                height: 'auto',
-                mixBlendMode: 'multiply',
-                filter: 'drop-shadow(0 4px 24px rgba(212,160,23,0.25))',
-                userSelect: 'none',
-              }}
-              draggable={false}
-            />
-          </div>
-        </div>
+        <RevealSequence delay={100}>
+          <nav className="breadcrumb" aria-label="Breadcrumb">
+            <Link to="/">Home</Link><span className="breadcrumb-sep">/</span><span>OVERSCITE</span>
+          </nav>
+          <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Platform</span></div>
+          <h1 style={{ marginBottom: '1.25rem' }}>OVERSCITE<sup style={{ fontSize: '0.4em', color: 'var(--color-primary)', verticalAlign: 'super' }}>™</sup></h1>
+          <p className="text-muted max-prose" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
+            The professional command and control surface for the SCINGULAR™ architecture. 
+            OVERSCITE transforms complex field data into actionable geospatial intelligence.
+          </p>
+        </RevealSequence>
       </div>
     </section>
 
-    {/* What is OVERSCITE */}
     <section className="section" style={{ background: 'var(--color-background)' }}>
       <div className="container">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%,380px),1fr))', gap: 'clamp(2rem,6vw,5rem)', alignItems: 'center' }}>
-          <div>
-            <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Platform Overview</span></div>
-            <h2 style={{ marginBottom: '1.25rem' }}>The Field Intelligence Workspace</h2>
-            <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.7', maxWidth: '600px' }}>
-              OVERSCITE is the primary workspace layer built on the SCINGULAR architecture. It provides
-              a governed environment for managing assets, field intelligence, stakeholder data, 
-              and compliance workflows across professional field operations.
-            </p>
-            <p className="text-muted" style={{ lineHeight: '1.8' }}>
-              Every action in OVERSCITE is governed, auditable, and human-reviewed. No automated decision
-              overrides professional human judgment.
-            </p>
-          </div>
-          <div style={{ display: 'grid', gap: '1rem' }}>
-            {[
-              { icon: <MapPin size={20} color="var(--color-primary)" />, title: 'Property-Aware', desc: 'Location and property context flows through every workflow.' },
-              { icon: <Users size={20} color="var(--color-primary)" />, title: 'Client-Focused', desc: 'Client records, communications, and report delivery governed together.' },
-              { icon: <FileText size={20} color="var(--color-primary)" />, title: 'Reporting-Ready', desc: 'Documentation, evidence, and findings structured for professional delivery.' },
-              { icon: <CheckCircle size={20} color="var(--color-primary)" />, title: 'Compliance-Bounded', desc: 'All outputs operate within BANE-enforced compliance constraints.' },
-            ].map(({ icon, title, desc }) => (
-              <div key={title} className="feature-card" style={{ display: 'flex', gap: '1rem', padding: '1.1rem' }}>
-                <div style={{ flexShrink: 0, marginTop: '2px' }}>{icon}</div>
-                <div>
-                  <div style={{ fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.3rem' }}>{title}</div>
-                  <div className="text-muted text-sm">{desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <RevealSequence delay={200}>
+            <div className="glass-panel-wrapper" style={{ position: 'relative' }}>
+              <img 
+                src="/media/overscite_preview.png" 
+                alt="OVERSCITE Interface Preview" 
+                style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }} 
+              />
+              <div style={{ position: 'absolute', inset: 0, borderRadius: '12px', border: '1px solid rgba(212,160,23,0.1)' }} />
+            </div>
+          </RevealSequence>
+
+          <RevealSequence delay={400}>
+            <div>
+              <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Intelligence</span></div>
+              <h2 style={{ marginBottom: '1.5rem' }}>Professional Operational Control</h2>
+              <p className="text-muted" style={{ lineHeight: '1.8', marginBottom: '1.5rem' }}>
+                OVERSCITE is not a dashboard; it is a governed execution environment. It provides the visibility 
+                required to manage vast infrastructure assets and distributed field teams with surgical precision.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                {[
+                  'Unified geospatial visibility',
+                  'Governed task orchestration',
+                  'Real-time compliance monitoring',
+                  'Evidence-based reporting',
+                ].map((item, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem', fontSize: '0.95rem' }}>
+                    <div style={{ width: '6px', height: '6px', background: 'var(--color-primary)', borderRadius: '50%' }} />
+                    <span className="text-muted">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </RevealSequence>
         </div>
       </div>
     </section>
 
-    {/* Cinematic preview band */}
-    <section className="cinematic-bg section" style={{ backgroundImage: 'url(/media/overscite.jpeg)' }}>
-      <div className="cinematic-overlay" />
-      <div className="container cinematic-content">
-        <div className="glass-panel" style={{ maxWidth: '680px' }}>
-          <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Preview Environment</span></div>
-          <h2 style={{ marginBottom: '1.25rem' }}>Demo-Safe Preview Access</h2>
-          <p className="text-muted" style={{ lineHeight: '1.8', marginBottom: '1.5rem' }}>
-            The OVERSCITE Preview environment is an isolated, demo-safe demonstration environment.
-            It does not contain live customer data, property records, inspection findings, or
-            operational information of any kind. It is designed to demonstrate the interface and
-            workflow posture only.
-          </p>
-          <div className="flex gap-md flex-wrap">
-            <a href="https://isdi-overscite.web.app" className="btn btn-primary" target="_blank" rel="noopener noreferrer" id="overscite-page-preview-cta">
-              Enter Preview <Eye size={16} />
-            </a>
-            <Link to="/preview-request" className="btn btn-outline">Request Formal Access</Link>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* Workflow Features */}
     <section className="section" style={{ background: 'var(--color-accent)' }}>
       <div className="container">
-        <div className="eyebrow" style={{ justifyContent: 'center' }}><div className="eyebrow-line" /><span className="eyebrow-text">Capabilities</span><div className="eyebrow-line" /></div>
-        <h2 className="text-center" style={{ marginBottom: '0.5rem' }}>Designed for Field Professionals</h2>
-        <p className="text-muted text-center max-prose mb-lg" style={{ margin: '0.75rem auto 3rem' }}>
-          OVERSCITE is designed to be the operational intelligence layer for multi-industry field professionals — not a generic productivity tool.
-        </p>
+        <RevealSequence delay={100}>
+          <div className="eyebrow" style={{ justifyContent: 'center' }}><div className="eyebrow-line" /><span className="eyebrow-text">Capabilities</span><div className="eyebrow-line" /></div>
+          <h2 className="text-center" style={{ marginBottom: '3.5rem' }}>Platform Features</h2>
+        </RevealSequence>
+
         <div className="card-grid">
-          {[
-            { title: 'Inspection Workflow Management', desc: 'Schedule, execute, and deliver inspection workflows through a governed interface.' },
-            { title: 'Property Intelligence', desc: 'Structured property data, location context, and historical records in one governed workspace.' },
-            { title: 'Evidence & Documentation', desc: 'Field evidence captured, organized, and traceable to human-reviewed findings.' },
-            { title: 'Client Delivery', desc: 'Governed report generation and client communication within audit-ready boundaries.' },
-            { title: 'Compliance Awareness', desc: 'Jurisdiction and compliance context surfaced through BANE-bounded intelligence.' },
-            { title: 'Field Operations Support', desc: 'Designed for use in the field — mobile-aware, offline-capable posture in development.' },
-          ].map(({ title, desc }) => (
-            <div key={title} className="feature-card">
-              <div style={{ width: '8px', height: '2px', background: 'var(--color-primary)', marginBottom: '1rem', borderRadius: '2px' }} />
-              <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '0.6rem' }}>{title}</h3>
-              <p className="text-muted text-sm" style={{ lineHeight: '1.6' }}>{desc}</p>
-            </div>
+          {FEATURES.map((f, i) => (
+            <RevealSequence key={i} delay={100 + (i * 50)}>
+              <GlassPanel className="p-8 h-full">
+                <div style={{ marginBottom: '1.25rem' }}>{f.icon}</div>
+                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem' }}>{f.title}</h3>
+                <p className="text-muted text-sm" style={{ lineHeight: '1.6' }}>{f.desc}</p>
+              </GlassPanel>
+            </RevealSequence>
           ))}
         </div>
       </div>
     </section>
 
-    <section className="section text-center" style={{ background: 'linear-gradient(to bottom, var(--color-background), var(--color-accent))' }}>
+    <section className="section text-center">
       <div className="container">
-        <h2 style={{ marginBottom: '1.25rem' }}>Access the Preview</h2>
-        <p className="text-muted mb-lg max-prose" style={{ margin: '0 auto 2.5rem' }}>
-          Request formal preview access or enter the demo environment directly. No live data is present.
-        </p>
-        <div className="flex-center gap-md flex-wrap">
-          <a href="https://isdi-overscite.web.app" className="btn btn-primary" style={{ padding: '1rem 2.5rem' }} target="_blank" rel="noopener noreferrer">Enter Preview</a>
-          <Link to="/preview-request" className="btn btn-ghost" style={{ padding: '1rem 2.5rem' }}>Request Formal Access</Link>
-        </div>
+        <RevealSequence delay={200}>
+          <GlassPanel className="p-12" style={{ borderTop: '4px solid var(--color-primary)' }}>
+            <h2 style={{ marginBottom: '1.25rem' }}>Experience OVERSCITE</h2>
+            <p className="text-muted mb-lg max-prose" style={{ margin: '0 auto 2.5rem' }}>
+              The public preview environment allows authorized users to explore the interface and interaction 
+              model of the OVERSCITE command surface.
+            </p>
+            <div className="flex-center gap-md flex-wrap">
+              <a href="https://isdi-overscite.web.app" className="btn btn-primary" style={{ padding: '1rem 2.5rem' }} target="_blank" rel="noopener noreferrer">Enter Preview</a>
+              <Link to="/contact" className="btn btn-outline" style={{ padding: '1rem 2.5rem' }}>Schedule a Briefing</Link>
+            </div>
+          </GlassPanel>
+        </RevealSequence>
       </div>
     </section>
   </>

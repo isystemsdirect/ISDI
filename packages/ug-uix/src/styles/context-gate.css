@@ -1,0 +1,107 @@
+/* BANE Site Context Action Gate Styles */
+
+.bane-context-gate {
+  position: fixed;
+  z-index: 9999;
+  width: 280px;
+  background: rgba(4, 9, 14, 0.95);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 160, 23, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 0.5rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Entrance Animation */
+  opacity: 0;
+  transform: scale(0.95) translateY(-5px);
+  animation: contextGateEnter 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes contextGateEnter {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.bane-context-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 0.5rem;
+}
+
+.bane-context-header-text {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.bane-context-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  color: var(--color-text);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  text-decoration: none;
+}
+
+.bane-context-item:hover {
+  background-color: rgba(212, 160, 23, 0.15);
+  color: var(--color-primary);
+}
+
+.bane-context-item svg {
+  color: var(--color-text-muted);
+  transition: color 0.15s ease;
+}
+
+.bane-context-item:hover svg {
+  color: var(--color-primary);
+}
+
+.bane-context-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin: 0.5rem 0;
+}
+
+.bane-context-status {
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.bane-context-status-badge {
+  font-size: 0.65rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  background: rgba(212, 160, 23, 0.15);
+  color: var(--color-primary);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+/* Ensure no context menu animation if reduced motion preferred */
+@media (prefers-reduced-motion: reduce) {
+  .bane-context-gate {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

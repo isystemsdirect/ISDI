@@ -1,0 +1,119 @@
+/* Utility Bar & Ecosystem Navigation */
+
+.utility-bar {
+  background: rgba(2, 7, 11, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  height: 36px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+}
+
+.utility-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.utility-link {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.utility-link:hover {
+  color: var(--color-primary);
+}
+
+.utility-link svg {
+  opacity: 0.6;
+}
+
+.utility-link:hover svg {
+  opacity: 1;
+}
+
+/* Ecosystem Dropdown Positioning */
+.ecosystem-dropdown-wrapper {
+  position: relative;
+}
+
+.ecosystem-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 320px;
+  margin-top: 0.5rem;
+  background: rgba(4, 9, 14, 0.98);
+  border: 1px solid rgba(212, 160, 23, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  padding: 1.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ecosystem-dropdown-wrapper:hover .ecosystem-dropdown-menu {
+  display: flex;
+}
+
+.ecosystem-section-title {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.ecosystem-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.ecosystem-item:hover {
+  background: rgba(212, 160, 23, 0.1);
+}
+
+.ecosystem-item-icon {
+  color: var(--color-text-muted);
+}
+
+.ecosystem-item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ecosystem-item-label {
+  font-weight: 600;
+}
+
+.ecosystem-item-desc {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 992px) {
+  .utility-bar {
+    display: none;
+  }
+}

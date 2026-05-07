@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare, HelpCircle, Shield, Download } from 'lucide-react';
 import { ISDI_BRAND_NAME } from '@isdi/brand';
+import { EcosystemDropdown } from './EcosystemDropdown';
 
 interface HeaderProps {
   onOpenGuide: () => void;
@@ -31,6 +32,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenGuide }) => {
 
   return (
     <>
+      {/* Utility Bar (Desktop Only) */}
+      <div className="utility-bar">
+        <div className="container utility-container">
+          <Link to="/faq" className="utility-link"><HelpCircle size={12} /> Help</Link>
+          <EcosystemDropdown />
+        </div>
+      </div>
+
       <header
         className="site-header"
         style={scrolled ? { background: 'rgba(2,7,11,0.98)' } : undefined}
@@ -147,6 +156,22 @@ export const Header: React.FC<HeaderProps> = ({ onOpenGuide }) => {
           <MessageSquare size={16} style={{ color: 'var(--color-primary)' }} />
           Scing Site Guide
         </button>
+
+        <div className="mobile-nav-divider" />
+        
+        <div style={{ padding: '0 1.5rem', marginBottom: '1rem' }}>
+          <span style={{ fontSize: '0.6rem', fontWeight: 800, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-primary)', display: 'block', marginBottom: '0.75rem' }}>
+            Ecosystem Access
+          </span>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <Link to="/contact?intent=arc-onboarding" className="utility-link" style={{ fontSize: '0.8rem' }} onClick={closeMenu}>
+              <Shield size={14} /> ARC Identity Onboarding
+            </Link>
+            <Link to="/contact?intent=demos" className="utility-link" style={{ fontSize: '0.8rem' }} onClick={closeMenu}>
+              <Download size={14} /> Demos & Downloads
+            </Link>
+          </div>
+        </div>
 
         <div className="mobile-nav-cta">
           <a

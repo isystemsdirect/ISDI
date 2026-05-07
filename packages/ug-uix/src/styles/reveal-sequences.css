@@ -1,0 +1,12 @@
+/* UG-UIX-STEM-002: Sequential Disclosure CSS */
+
+.ug-uix-reveal-sequence {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--ug-uix-transition-reveal), transform var(--ug-uix-transition-reveal);
+}
+
+.ug-uix-reveal-sequence.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
