@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Shield, Download, Play, Settings, HelpCircle } from 'lucide-react';
+import { User, Shield, Download, Play, Settings, HelpCircle, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const EcosystemDropdown: React.FC = () => {
@@ -67,5 +67,3 @@ export const EcosystemDropdown: React.FC = () => {
     </div>
   );
 };
-
-import { Globe } from 'lucide-react';

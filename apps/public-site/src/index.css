@@ -343,7 +343,7 @@ p  { font-size: clamp(0.95rem, 2vw, 1.1rem); }
 /* ── Header ─────────────────────────────────────────────────── */
 .site-header {
   position: fixed;
-  top: 0;
+  top: 36px; /* Offset for utility bar */
   left: 0;
   right: 0;
   height: var(--header-h);
@@ -352,7 +352,18 @@ p  { font-size: clamp(0.95rem, 2vw, 1.1rem); }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(212, 160, 23, 0.1);
-  transition: background var(--transition-med);
+  transition: all var(--transition-med);
+}
+
+.site-header.scrolled {
+  top: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 992px) {
+  .site-header {
+    top: 0; /* No utility bar on mobile */
+  }
 }
 
 .site-header .container {

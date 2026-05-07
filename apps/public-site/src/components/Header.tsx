@@ -41,7 +41,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenGuide }) => {
       </div>
 
       <header
-        className="site-header"
+        className={`site-header${scrolled ? ' scrolled' : ''}`}
         style={scrolled ? { background: 'rgba(2,7,11,0.98)' } : undefined}
       >
         <div className="container">
