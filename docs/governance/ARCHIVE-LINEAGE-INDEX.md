@@ -30,6 +30,7 @@ This document serves as the master record for the ISDI Infrastructure Ladder dev
 | **PP9** | Source Deck Governance | Proprietary artifact isolation. | `archive/proprietary/` | **LOCKED** |
 | **PP10** | DNS Activation | review.isystemsdirect.com prep. | `deployment/` | **PREPARED** |
 | **PP11** | ArcHive™ Indexing | Final lineage and library manifest. | `docs/governance/` | **ACTIVE** |
+| **PP12** | Canon Site Lock | Final site structure and mutation lock. | `docs/governance/` | **COMPLETE** |
 
 ---
 

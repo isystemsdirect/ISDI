@@ -11,6 +11,8 @@
 @import '../../../packages/ug-uix/src/styles/governed-progress.css';
 @import '../../../packages/ug-uix/src/styles/context-gate.css';
 @import '../../../packages/ug-uix/src/styles/utility-bar.css';
+@import '../../../packages/ug-uix/src/styles/ambient-mesh.css';
+@import '../../../packages/ug-uix/src/styles/pointer-presence.css';
 
 
 /* ── Design Tokens ─────────────────────────────────────────── */

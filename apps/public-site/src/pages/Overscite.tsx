@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout, Search, Map, Calendar, ShieldCheck, Database } from 'lucide-react';
-import { RevealSequence, GlassPanel } from '@isdi/ug-uix';
+import { RevealSequence, GlassPanel, AmbientMesh, PresenceHalo } from '@isdi/ug-uix';
 
 const FEATURES = [
   { icon: <Map size={24} color="var(--color-primary)" />, title: 'Geospatial Command', desc: 'Centralized location intelligence with layered data visualization and conflict reason-code analysis.' },
@@ -12,22 +12,48 @@ const FEATURES = [
   { icon: <Layout size={24} color="var(--color-primary)" />, title: 'OverHUD Interface', desc: 'Ultra-Grade visual command surface designed for rapid situation assessment and strategic response.' },
 ];
 
-export const Overscite: React.FC = () => (
+export const Overscite: React.FC = () => {
+  useEffect(() => {
+    const link: HTMLLinkElement = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/png';
+    link.rel = 'icon';
+    link.href = '/media/overscite_logo.png';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    return () => {
+      link.type = 'image/x-icon';
+      link.href = '/favicon.ico';
+    };
+  }, []);
+
+  return (
   <>
-    <section className="page-hero">
-      <div className="container cinematic-content">
-        <RevealSequence delay={100}>
-          <nav className="breadcrumb" aria-label="Breadcrumb">
-            <Link to="/">Home</Link><span className="breadcrumb-sep">/</span><span>OVERSCITE</span>
-          </nav>
-          <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Platform</span></div>
-          <h1 style={{ marginBottom: '1.25rem' }}>OVERSCITE<sup style={{ fontSize: '0.4em', color: 'var(--color-primary)', verticalAlign: 'super' }}>™</sup></h1>
-          <p className="text-muted max-prose" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
-            The professional command and control surface for the SCINGULAR™ architecture. 
-            OVERSCITE transforms complex field data into actionable geospatial intelligence.
-          </p>
-        </RevealSequence>
-      </div>
+    <section className="page-hero" style={{ position: 'relative', overflow: 'hidden' }}>
+      <AmbientMesh />
+      
+      <PresenceHalo>
+        <div className="container cinematic-content" style={{ position: 'relative', zIndex: 1 }}>
+          <RevealSequence delay={100}>
+            <nav className="breadcrumb" aria-label="Breadcrumb">
+              <Link to="/">Home</Link><span className="breadcrumb-sep">/</span><span>OVERSCITE</span>
+            </nav>
+            
+            <div style={{ marginBottom: '2rem' }}>
+              <img 
+                src="/media/overscite_logo.png" 
+                alt="OVERSCITE™" 
+                style={{ height: 'clamp(40px, 8vw, 64px)', width: 'auto', display: 'block' }} 
+              />
+            </div>
+
+            <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Platform</span></div>
+            <h1 style={{ marginBottom: '1.25rem' }}>Professional Operational Control</h1>
+            <p className="text-muted max-prose" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
+              The professional command and control surface for the SCINGULAR™ architecture. 
+              OVERSCITE transforms complex field data into actionable geospatial intelligence.
+            </p>
+          </RevealSequence>
+        </div>
+      </PresenceHalo>
     </section>
 
     <section className="section" style={{ background: 'var(--color-background)' }}>
@@ -110,4 +136,5 @@ export const Overscite: React.FC = () => (
       </div>
     </section>
   </>
-);
+  );
+};

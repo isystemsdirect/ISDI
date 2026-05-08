@@ -1,0 +1,11 @@
+# ISDI PUBLIC SITE - ROBOTS POLICY
+# UG UIX v2 | SCINGULAR Governed Interface
+
+User-agent: *
+Allow: /
+Disallow: /nvidia-review
+Disallow: /archive/
+Disallow: /private-reference/
+
+# Disallow all bots from review subdomain if detected via path logic 
+# (Handled more robustly via noindex meta tags on specific routes)

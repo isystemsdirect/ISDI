@@ -48,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenGuide }) => {
           {/* Brand */}
           <Link to="/" className="header-brand" onClick={closeMenu} aria-label="ISDI Home">
             <img 
-              src="/media/isdi_logo.png" 
+              src="/media/isdi_brand_logo.png" 
               alt="ISDI Logo" 
               style={{ 
                 height: '32px', 

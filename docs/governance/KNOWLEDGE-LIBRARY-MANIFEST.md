@@ -36,3 +36,11 @@ Location: `archive/proprietary/`
 
 - **NVIDIA Source Deck:** `nvidia-source/` (Witness-grade reference)
 - **Governance Policy:** `docs/governance/SOURCE-DECK-GOVERNANCE-POLICY.md`
+
+## 6. Canon Site Locks & Mutation Control
+Location: `docs/governance/` and `docs/deployment/`
+
+- **Final Site Structure Lock:** `docs/governance/FINAL_CANONICAL_SITE_STRUCTURE_LOCK.md`
+- **Deployment Control:** `docs/deployment/CANON_PUBLIC_SITE_DEPLOYMENT_CONTROL.md`
+- **Mutation Gates:** `docs/governance/PUBLIC_SITE_MUTATION_GATES.md`
+- **Cache-Bundle Verification:** `docs/deployment/CANON_APEX_CACHE_BUNDLE_VERIFICATION.md`
