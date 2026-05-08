@@ -15,9 +15,9 @@ const FEATURES = [
 export const Overscite: React.FC = () => {
   useEffect(() => {
     const link: HTMLLinkElement = document.querySelector("link[rel*='icon']") || document.createElement('link');
-    link.type = 'image/png';
+    link.type = 'image/x-icon';
     link.rel = 'icon';
-    link.href = '/media/overscite_logo.png';
+    link.href = '/overscite-favicon.ico';
     document.getElementsByTagName('head')[0].appendChild(link);
     return () => {
       link.type = 'image/x-icon';
