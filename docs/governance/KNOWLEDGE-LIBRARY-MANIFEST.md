@@ -24,6 +24,7 @@ Location: `docs/deployment/`
 - **DNS Activation Log:** `NVIDIA_REVIEW_DNS_ACTIVATION_LOG.md`
 - **Access Control Posture:** `NVIDIA_REVIEW_ACCESS_CONTROL_POSTURE.md`
 - **DNS Planning:** `NVIDIA_REVIEW_DNS_PLANNING.md`
+- **Repo Binding P1:** `OVERSCITE_GLOBAL_REPO_BINDING_P1.md`
 
 ## 4. Scing Intelligence (Intelligence Guide)
 Location: `apps/public-site/src/components/scing/`

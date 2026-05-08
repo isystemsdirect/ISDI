@@ -1,0 +1,42 @@
+name: Deploy OVERSCITE Preview
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/overscite-preview/**'
+      - 'packages/**'
+      - 'firebase.json'
+      - '.firebaserc'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/deploy-overscite-preview.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build OVERSCITE Preview
+        run: npm run build -w overscite-preview
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_WOVEN_HANDBOOK_474516_B0 }}'
+          projectId: woven-handbook-474516-b0
+          target: overscite-preview
