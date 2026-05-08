@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { X, ExternalLink, Shield, Info, HelpCircle, BookOpen, Mail, ChevronRight } from 'lucide-react';
+import { ScingNarrationShell } from './scing/ScingNarrationShell';
+import { NarrationContext } from './scing/ScingVoiceData';
 
 interface ScingGuidePanelProps {
   active: boolean;
@@ -55,6 +57,17 @@ const STATIC_KNOWLEDGE: Record<string, KnowledgeEntry> = {
 
 export const ScingGuidePanel: React.FC<ScingGuidePanelProps> = ({ active, onClose }) => {
   const [activeResponse, setActiveResponse] = useState<KnowledgeEntry | null>(null);
+  const location = useLocation();
+
+  // Determine narration context based on current route
+  let currentContext: NarrationContext = 'home';
+  if (location.pathname.startsWith('/about')) currentContext = 'about';
+  else if (location.pathname.startsWith('/scingular')) currentContext = 'architecture';
+  else if (location.pathname.startsWith('/overscite')) currentContext = 'overscite';
+  else if (location.pathname.startsWith('/preview-request')) currentContext = 'previewRequest';
+  else if (location.pathname.startsWith('/contact')) currentContext = 'contact';
+  else if (location.pathname.startsWith('/faq')) currentContext = 'faq';
+  else if (location.pathname.startsWith('/nvidia-review')) currentContext = 'nvidia';
 
   const handleAction = (key: string) => {
     setActiveResponse(STATIC_KNOWLEDGE[key] ?? null);
@@ -68,7 +81,7 @@ export const ScingGuidePanel: React.FC<ScingGuidePanelProps> = ({ active, onClos
   return (
     <div
       className={`scing-guide-panel glass-panel${active ? ' active' : ''}`}
-      style={{ padding: 'clamp(1.25rem,4vw,2rem)' }}
+      style={{ padding: 'clamp(1.25rem,4vw,2rem)', display: 'flex', flexDirection: 'column' }}
       role="dialog"
       aria-label="Scing Site Guide"
       aria-hidden={!active}
@@ -78,7 +91,10 @@ export const ScingGuidePanel: React.FC<ScingGuidePanelProps> = ({ active, onClos
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
           <Shield color="var(--color-primary)" size={20} />
           <span style={{ fontWeight: 800, letterSpacing: '0.1em', fontSize: '0.8rem', textTransform: 'uppercase' }}>
-            Scing Site Guide
+            SCINGULAR™ Intelligence
+          </span>
+          <span style={{ marginLeft: '0.5rem', padding: '0.1rem 0.4rem', fontSize: '0.6rem', border: '1px solid var(--color-primary)', borderRadius: '4px', color: 'var(--color-primary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+            Active
           </span>
         </div>
         <button
@@ -93,12 +109,17 @@ export const ScingGuidePanel: React.FC<ScingGuidePanelProps> = ({ active, onClos
       {/* Intro */}
       <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', lineHeight: '1.5', marginBottom: '1.25rem' }}>
         I am Scing, the human-facing interface for the SCINGULAR architecture.
-        How can I assist your exploration of Inspection Systems Direct?
+        My intelligence is currently bound to this public surface to assist your exploration.
       </p>
+
+      {/* Route-Aware Narration Shell */}
+      <div style={{ marginBottom: '1.25rem' }}>
+        <ScingNarrationShell initialMode="manual" context={currentContext} />
+      </div>
 
       {/* Active knowledge response */}
       {activeResponse && (
-        <div className="guide-response">
+        <div className="guide-response" style={{ flexGrow: 1 }}>
           <p style={{ fontSize: '0.82rem', lineHeight: '1.65' }}>{activeResponse.response}</p>
           <button
             onClick={() => setActiveResponse(null)}
@@ -111,7 +132,7 @@ export const ScingGuidePanel: React.FC<ScingGuidePanelProps> = ({ active, onClos
 
       {/* Quick Actions */}
       {!activeResponse && (
-        <div style={{ display: 'grid', gap: '0.6rem' }}>
+        <div style={{ display: 'grid', gap: '0.6rem', flexGrow: 1 }}>
           <GuideActionBtn
             icon={<Info size={15} />}
             label="What is SCINGULAR?"
@@ -170,9 +191,9 @@ export const ScingGuidePanel: React.FC<ScingGuidePanelProps> = ({ active, onClos
 
       {/* Trust notice */}
       <div style={{ marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.07)', fontSize: '0.68rem', color: 'var(--color-text-muted)' }}>
-        <strong style={{ color: 'rgba(212,160,23,0.7)' }}>Trust Notice:</strong>{' '}
-        No live Prime Intelligence execution is active on this public surface.
-        All guidance is based on public-safe static knowledge only.
+        <strong style={{ color: 'rgba(212,160,23,0.7)' }}>Site-bound SCINGULAR™ Intelligence is active.</strong>{' '}
+        BFI Intelligence is not exposed, but executed on this public surface.
+        Execution remains BANE-governed, public-surface bounded, human-authority aligned, and audit-conscious.
       </div>
     </div>
   );

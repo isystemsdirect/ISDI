@@ -9,7 +9,7 @@ export interface NarrationStep {
   duration?: number; // ms to show before auto-advancing
 }
 
-export type NarrationContext = 'home' | 'nvidia' | 'architecture';
+export type NarrationContext = 'home' | 'nvidia' | 'architecture' | 'overscite' | 'about' | 'previewRequest' | 'contact' | 'faq';
 
 export const SCING_VOICE_CATALOG: Record<NarrationContext, NarrationStep[]> = {
   home: [
@@ -29,5 +29,27 @@ export const SCING_VOICE_CATALOG: Record<NarrationContext, NarrationStep[]> = {
     { text: "Accessing architectural overview. SCINGULAR is built on the BFI Trinity: Core, Field, and Workflow.", duration: 7000 },
     { text: "The system is 'Fail-Closed' by design, ensuring no intelligence act occurs without BANE verification.", duration: 7000 },
     { text: "We prioritize traceability and human-in-the-loop authority at every intelligence boundary.", duration: 6000 }
+  ],
+  overscite: [
+    { text: "OVERSCITE™ is the governed operational-control surface.", duration: 6000 },
+    { text: "BANE preserves authorized boundaries across all interactions.", duration: 6000 },
+    { text: "Scing guides exploration without replacing accountable human authority.", duration: 7000 },
+    { text: "BFI execution remains bounded and non-exposed on this public surface.", duration: 7000 }
+  ],
+  about: [
+    { text: "Reviewing ISDI organizational posture and governance principles.", duration: 6000 },
+    { text: "Our mission is to establish human-authority-first architecture for critical infrastructure.", duration: 7000 }
+  ],
+  previewRequest: [
+    { text: "Initiating access request protocol for the OVERSCITE Preview environment.", duration: 6000 },
+    { text: "This environment is isolated and does not contain live customer or field records.", duration: 7000 }
+  ],
+  contact: [
+    { text: "Routing inquiry context for partnership or deployment consultation.", duration: 6000 },
+    { text: "ISDI engages with enterprise, municipal, and infrastructure partners globally.", duration: 7000 }
+  ],
+  faq: [
+    { text: "Accessing the public knowledge base for SCINGULAR and OVERSCITE.", duration: 6000 },
+    { text: "All responses align with our strict governance and operational doctrine.", duration: 7000 }
   ]
 };

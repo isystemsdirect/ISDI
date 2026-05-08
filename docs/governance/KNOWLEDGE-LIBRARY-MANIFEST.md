@@ -37,7 +37,8 @@ Location: `archive/proprietary/`
 - **NVIDIA Source Deck:** `nvidia-source/` (Witness-grade reference)
 - **Governance Policy:** `docs/governance/SOURCE-DECK-GOVERNANCE-POLICY.md`
 
-## 6. Canon Site Locks & Mutation Control
+## 6.- Canon Site Locks & Mutation Control (2026-05-07)
+- Sitewide ScingIntelligence & Hero Identity Alignment (2026-05-07)
 Location: `docs/governance/` and `docs/deployment/`
 
 - **Final Site Structure Lock:** `docs/governance/FINAL_CANONICAL_SITE_STRUCTURE_LOCK.md`

@@ -37,11 +37,11 @@ export const Overscite: React.FC = () => {
               <Link to="/">Home</Link><span className="breadcrumb-sep">/</span><span>OVERSCITE</span>
             </nav>
             
-            <div style={{ marginBottom: '2rem' }}>
+            <div style={{ marginBottom: 'clamp(2rem, 5vw, 3rem)', display: 'flex', justifyContent: 'center' }}>
               <img 
                 src="/media/overscite_logo.png" 
                 alt="OVERSCITE™" 
-                style={{ height: 'clamp(40px, 8vw, 64px)', width: 'auto', display: 'block' }} 
+                style={{ height: 'clamp(140px, 18vw, 260px)', width: 'auto', display: 'block' }} 
               />
             </div>
 

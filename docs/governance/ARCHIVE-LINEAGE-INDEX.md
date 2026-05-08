@@ -31,6 +31,7 @@ This document serves as the master record for the ISDI Infrastructure Ladder dev
 | **PP10** | DNS Activation | review.isystemsdirect.com prep. | `deployment/` | **PREPARED** |
 | **PP11** | ArcHive™ Indexing | Final lineage and library manifest. | `docs/governance/` | **ACTIVE** |
 | **PP12** | Canon Site Lock | Final site structure and mutation lock. | `docs/governance/` | **COMPLETE** |
+| **PP13** | ScingIntelligence Activation | Sitewide intelligence and OVERSCITE correction. | `intelligence/` | **COMPLETE** |
 
 ---
 
