@@ -21,7 +21,7 @@ export const Overscite: React.FC = () => {
     document.getElementsByTagName('head')[0].appendChild(link);
     return () => {
       link.type = 'image/x-icon';
-      link.href = '/favicon.ico';
+      link.href = '/favicon-dark.ico';
     };
   }, []);
 
