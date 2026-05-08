@@ -33,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenGuide }) => {
   return (
     <>
       {/* Utility Bar (Desktop Only) */}
-      <div className="utility-bar">
+      <div className={`utility-bar${scrolled ? ' scrolled' : ''}`} style={scrolled ? { transform: 'translateY(-100%)', opacity: 0 } : undefined}>
         <div className="container utility-container">
           <Link to="/faq" className="utility-link"><HelpCircle size={12} /> Help</Link>
           <EcosystemDropdown />

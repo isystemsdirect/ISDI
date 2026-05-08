@@ -546,6 +546,8 @@ p  { font-size: clamp(0.95rem, 2vw, 1.1rem); }
   z-index: 1;
   padding: 4rem 0;
   max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-title {
@@ -569,6 +571,7 @@ p  { font-size: clamp(0.95rem, 2vw, 1.1rem); }
   gap: 1rem;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-metrics {
@@ -576,6 +579,7 @@ p  { font-size: clamp(0.95rem, 2vw, 1.1rem); }
   gap: clamp(1.5rem, 5vw, 3rem);
   margin-top: clamp(3rem, 8vw, 5rem);
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-metric-label {

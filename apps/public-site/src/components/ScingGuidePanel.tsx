@@ -108,9 +108,14 @@ export const ScingGuidePanel: React.FC<ScingGuidePanelProps> = ({ active, onClos
 
       {/* Intro */}
       <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', lineHeight: '1.5', marginBottom: '1.25rem' }}>
-        I am Scing, the human-facing interface for the SCINGULAR architecture.
         My intelligence is currently bound to this public surface to assist your exploration.
       </p>
+
+      {/* Trust notice — Moved up for visibility */}
+      <div style={{ marginBottom: '1.25rem', padding: '0.75rem', background: 'rgba(212,160,23,0.05)', borderLeft: '2px solid var(--color-primary)', fontSize: '0.68rem', color: 'var(--color-text-muted)' }}>
+        <strong style={{ color: 'var(--color-primary)' }}>Site-bound SCINGULAR™ Intelligence active.</strong>{' '}
+        BFI Intelligence is not exposed, but executed on this public surface.
+      </div>
 
       {/* Route-Aware Narration Shell */}
       <div style={{ marginBottom: '1.25rem' }}>
@@ -189,10 +194,8 @@ export const ScingGuidePanel: React.FC<ScingGuidePanelProps> = ({ active, onClos
         </div>
       )}
 
-      {/* Trust notice */}
-      <div style={{ marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.07)', fontSize: '0.68rem', color: 'var(--color-text-muted)' }}>
-        <strong style={{ color: 'rgba(212,160,23,0.7)' }}>Site-bound SCINGULAR™ Intelligence is active.</strong>{' '}
-        BFI Intelligence is not exposed, but executed on this public surface.
+      {/* Bottom Legal Disclosure */}
+      <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.07)', fontSize: '0.62rem', color: 'rgba(255,255,255,0.3)', fontStyle: 'italic' }}>
         Execution remains BANE-governed, public-surface bounded, human-authority aligned, and audit-conscious.
       </div>
     </div>

@@ -26,7 +26,21 @@ export const Home: React.FC<HomeProps> = ({ onOpenGuide }) => {
               <span className="eyebrow-text">Governed Intelligence</span>
             </div>
 
-            <h1 className="hero-title">
+            <div className="hero-identity-anchor" style={{ display: 'flex', justifyContent: 'center' }}>
+              <img 
+                src="/media/overscite_logo.png" 
+                alt="OVERSCITE Logo" 
+                className="hero-logo"
+                style={{ 
+                  height: 'clamp(50px, 10vw, 80px)', 
+                  width: 'auto',
+                  marginBottom: '2rem',
+                  filter: 'drop-shadow(0 0 20px rgba(212,160,23,0.3))'
+                }} 
+              />
+            </div>
+
+            <h1 className="hero-title" style={{ fontSize: 'clamp(1.8rem, 5vw, 3.5rem)', opacity: 0.8, fontWeight: 700, letterSpacing: '0.05em' }}>
               Inspection Systems Direct
             </h1>
 

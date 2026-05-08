@@ -59,6 +59,18 @@ export const ScingNarrationShell: React.FC<ScingNarrationShellProps> = ({
           <span style={{ fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-primary)' }}>
             Scing Intelligence Guide
           </span>
+          <span style={{ 
+            fontSize: '0.6rem', 
+            padding: '0.1rem 0.4rem', 
+            background: 'rgba(212,160,23,0.1)', 
+            border: '1px solid rgba(212,160,23,0.3)', 
+            borderRadius: '3px', 
+            color: 'var(--color-primary)', 
+            fontWeight: 800, 
+            letterSpacing: '0.05em' 
+          }}>
+            BOUNDARY
+          </span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <span style={{ fontSize: '0.65rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
@@ -114,6 +126,10 @@ export const ScingNarrationShell: React.FC<ScingNarrationShellProps> = ({
         >
           <RotateCcw size={16} /> Restart
         </button>
+      </div>
+
+      <div style={{ marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.05)', fontSize: '0.6rem', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.02em', fontStyle: 'italic' }}>
+        Execution bounded to public-site context. BANE-governed audit active.
       </div>
 
       <style>{`

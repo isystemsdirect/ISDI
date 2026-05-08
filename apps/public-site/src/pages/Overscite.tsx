@@ -31,27 +31,35 @@ export const Overscite: React.FC = () => {
       <AmbientMesh />
       
       <PresenceHalo>
-        <div className="container cinematic-content" style={{ position: 'relative', zIndex: 1 }}>
-          <RevealSequence delay={100}>
-            <nav className="breadcrumb" aria-label="Breadcrumb">
-              <Link to="/">Home</Link><span className="breadcrumb-sep">/</span><span>OVERSCITE</span>
-            </nav>
+        <div className="container cinematic-content" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <RevealSequence delay={100}>
+              <nav className="breadcrumb" aria-label="Breadcrumb" style={{ justifyContent: 'center' }}>
+                <Link to="/">Home</Link><span className="breadcrumb-sep">/</span><span>OVERSCITE</span>
+              </nav>
             
-            <div style={{ marginBottom: 'clamp(2rem, 5vw, 3rem)', display: 'flex', justifyContent: 'center' }}>
+            <div className="hero-identity-anchor" style={{ marginBottom: 'clamp(2rem, 5vw, 3rem)', display: 'flex', justifyContent: 'center' }}>
               <img 
                 src="/media/overscite_logo.png" 
                 alt="OVERSCITE™" 
-                style={{ height: 'clamp(140px, 18vw, 260px)', width: 'auto', display: 'block' }} 
+                className="hero-logo"
+                style={{ 
+                  height: 'clamp(160px, 22vw, 320px)', 
+                  width: 'auto', 
+                  display: 'block',
+                  filter: 'drop-shadow(0 0 30px rgba(212,160,23,0.4))'
+                }} 
               />
             </div>
 
-            <div className="eyebrow"><div className="eyebrow-line" /><span className="eyebrow-text">Platform</span></div>
+            <div className="eyebrow" style={{ justifyContent: 'center' }}><div className="eyebrow-line" /><span className="eyebrow-text">Platform</span><div className="eyebrow-line" /></div>
             <h1 style={{ marginBottom: '1.25rem' }}>Professional Operational Control</h1>
             <p className="text-muted max-prose" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
               The professional command and control surface for the SCINGULAR™ architecture. 
               OVERSCITE transforms complex field data into actionable geospatial intelligence.
             </p>
-          </RevealSequence>
+            </RevealSequence>
+          </div>
         </div>
       </PresenceHalo>
     </section>
